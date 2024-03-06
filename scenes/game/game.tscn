@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://j8ro405lrjf7"]
+[gd_scene load_steps=5 format=3 uid="uid://j8ro405lrjf7"]
+
+[ext_resource type="Script" path="res://scenes/game/game.gd" id="1_8ttt1"]
+[ext_resource type="PackedScene" uid="uid://udjm72tm6atx" path="res://scenes/parallax/background.tscn" id="1_sk561"]
+[ext_resource type="PackedScene" uid="uid://qjnmsdenulef" path="res://game_object/entity/player/player.tscn" id="2_c2jf2"]
+[ext_resource type="PackedScene" uid="uid://bpsp22iqs8s36" path="res://game_object/enviroment/ground/ground.tscn" id="3_j8rmg"]
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_8ttt1")
+
+[node name="Background" parent="." instance=ExtResource("1_sk561")]
+
+[node name="Player" parent="." instance=ExtResource("2_c2jf2")]
+position = Vector2(64, 500)
+
+[node name="Ground" parent="." instance=ExtResource("3_j8rmg")]

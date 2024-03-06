@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://udjm72tm6atx"]
+
+[ext_resource type="Texture2D" uid="uid://debs1c2hgj7j8" path="res://assets/enviroment/plx-1.png" id="1_1jtl5"]
+[ext_resource type="Script" path="res://scenes/parallax/background.gd" id="1_ilvoi"]
+[ext_resource type="PackedScene" uid="uid://cpfkn6kam2o22" path="res://scenes/parallax/layer/parallax_layer.tscn" id="2_qo5in"]
+[ext_resource type="Texture2D" uid="uid://i70nrbp1c2xe" path="res://assets/enviroment/plx-2.png" id="3_8ctl1"]
+[ext_resource type="Texture2D" uid="uid://b2qygpqfgq4a5" path="res://assets/enviroment/plx-3.png" id="5_vvia1"]
+[ext_resource type="Texture2D" uid="uid://bgyqia8l2v6i3" path="res://assets/enviroment/plx-4.png" id="6_udsh7"]
+[ext_resource type="Texture2D" uid="uid://0d1g2or1yv5p" path="res://assets/enviroment/plx-5.png" id="7_ramij"]
+
+[node name="Background" type="ParallaxBackground"]
+script = ExtResource("1_ilvoi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1jtl5")
+centered = false
+
+[node name="ParallaxLayer" parent="." instance=ExtResource("2_qo5in")]
+scroll_scale = 0.3
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxLayer"]
+texture = ExtResource("3_8ctl1")
+centered = false
+
+[node name="ParallaxLayer2" parent="." instance=ExtResource("2_qo5in")]
+scroll_scale = 0.4
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxLayer2"]
+texture = ExtResource("5_vvia1")
+centered = false
+
+[node name="ParallaxLayer3" parent="." instance=ExtResource("2_qo5in")]
+scroll_scale = 0.5
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxLayer3"]
+texture = ExtResource("6_udsh7")
+centered = false
+
+[node name="ParallaxLayer4" parent="." instance=ExtResource("2_qo5in")]
+scroll_scale = 0.6
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxLayer4"]
+texture = ExtResource("7_ramij")
+centered = false
