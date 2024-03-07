@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://j8ro405lrjf7"]
+
+[ext_resource type="Script" path="res://scenes/game/game.gd" id="1_8ttt1"]
+[ext_resource type="PackedScene" uid="uid://udjm72tm6atx" path="res://scenes/parallax/background.tscn" id="1_sk561"]
+[ext_resource type="PackedScene" uid="uid://qjnmsdenulef" path="res://object/entity/player/player.tscn" id="2_c2jf2"]
+[ext_resource type="PackedScene" uid="uid://bpsp22iqs8s36" path="res://object/enviroment/ground/ground.tscn" id="3_j8rmg"]
+[ext_resource type="PackedScene" uid="uid://de2n5j8ej8rx5" path="res://object/enviroment/barrier/barrier.tscn" id="5_mec5i"]
+[ext_resource type="PackedScene" uid="uid://cs2ghi6omc513" path="res://hud/hud.tscn" id="6_f5em1"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_8ttt1")
+
+[node name="Background" parent="." instance=ExtResource("1_sk561")]
+
+[node name="Player" parent="." instance=ExtResource("2_c2jf2")]
+position = Vector2(96, 486)
+
+[node name="Ground" parent="." instance=ExtResource("3_j8rmg")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Barrier" parent="." instance=ExtResource("5_mec5i")]
+
+[node name="Barrier2" parent="." instance=ExtResource("5_mec5i")]
+position = Vector2(1152, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("6_f5em1")]

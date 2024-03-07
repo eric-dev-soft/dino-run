@@ -6,7 +6,7 @@ extends CharacterBody2D
 @onready var run_col = $RunCol
 
 func _ready():
-	pass
+	SignalManager.on_game.connect(_on_game)
 
 func _physics_process(delta):
 	velocity.y += GameManager.GRAVITY * delta
@@ -71,3 +71,6 @@ func _change_col():
 		run_col.disabled = true
 	else:
 		run_col.disabled = false
+
+func _on_game():
+	animated_sprite_2d.play("run")
