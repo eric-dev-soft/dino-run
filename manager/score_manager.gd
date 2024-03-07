@@ -1,11 +1,20 @@
 extends Node
 
+var _score: int = 0
+var _high_score: int = 0
+const SCORE_MODIFIER: int = 10
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func get_score() -> int:
+	return _score
 
+func get_high_score() -> int:
+	return _high_score
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func set_score(value: int) -> void:
+	_score = value
+	if _score > _high_score:
+		_high_score = _score
+	SignalManager.on_update_score.emit()
+	
+func increment_score() -> void:
+	set_score(_score + 1)

@@ -8,3 +8,4 @@ signal on_player_duck
 signal on_player_jump
 signal on_player_get_hit
 signal on_game_over
+signal on_update_score

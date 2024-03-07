@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsdpbi5jbvxre"
-path="res://.godot/imported/rock.png-1dbe8a1589cfd2b00462593b4679b856.ctex"
+uid="uid://yeojibhg4cvg"
+path="res://.godot/imported/Bird.png-efe928c6367a62945fbdc3efc131d7bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/entity/enemy/barrel/rock.png"
-dest_files=["res://.godot/imported/rock.png-1dbe8a1589cfd2b00462593b4679b856.ctex"]
+source_file="res://assets/entity/enemy/bird/Bird.png"
+dest_files=["res://.godot/imported/Bird.png-efe928c6367a62945fbdc3efc131d7bf.ctex"]
 
 [params]
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=24 format=3 uid="uid://qjnmsdenulef"]
+[gd_scene load_steps=25 format=3 uid="uid://qjnmsdenulef"]
 
-[ext_resource type="Script" path="res://game_object/entity/player/player.gd" id="1_5221m"]
+[ext_resource type="Script" path="res://object/entity/player/player.gd" id="1_5221m"]
 [ext_resource type="Texture2D" uid="uid://doxmslk6ddstt" path="res://assets/entity/player/mort.png" id="1_hw4tk"]
 [ext_resource type="AudioStream" uid="uid://os6qkhn5me0a" path="res://assets/audio/sfx/entity/player/jump.wav" id="2_4p736"]
+[ext_resource type="AudioStream" uid="uid://ip26pyuyqi55" path="res://assets/audio/sfx/entity/player/run.mp3" id="4_iqdww"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1wscv"]
 atlas = ExtResource("1_hw4tk")
@@ -160,7 +161,8 @@ script = ExtResource("1_5221m")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_6ve84")
 animation = &"idle"
-frame_progress = 0.791542
+autoplay = "idle"
+frame_progress = 0.375203
 
 [node name="RunCol" type="CollisionShape2D" parent="."]
 position = Vector2(-0.75, 0.6875)
@@ -172,3 +174,6 @@ shape = SubResource("RectangleShape2D_kpngq")
 
 [node name="JumpSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_4p736")
+
+[node name="RunSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_iqdww")

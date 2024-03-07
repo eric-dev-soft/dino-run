@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://csqfie0qqu5ei"]
+
+[ext_resource type="Texture2D" uid="uid://b38t1xnov2dsg" path="res://assets/entity/enemy/barrel/barrel.png" id="1_diaed"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ql800"]
+size = Vector2(112, 105)
+
+[node name="Barrel" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_diaed")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_ql800")
